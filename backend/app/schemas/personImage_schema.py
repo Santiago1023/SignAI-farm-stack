@@ -5,7 +5,7 @@ from pydantic import BaseModel, Field
 from pydantic import validator
 
 class PersonImageCreate(BaseModel):
-    image_url: str = Field(..., title="Image url" ,max_length=60, min_length=5)   #title='Title' no lo voy a poner como argumento
+    image_url: str = Field(..., title="Image url" , min_length=5)   #title='Title' no lo voy a poner como argumento
     genre: str = Field(..., title="Man | Woman")
     age: int = Field(..., gt=0)
     sick: bool
